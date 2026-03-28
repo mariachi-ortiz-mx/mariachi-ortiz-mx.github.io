@@ -78,34 +78,39 @@
                     </button>
                 </div>
 
-                <script>
-                function enviarWhatsApp() {
-                    const nombre = document.getElementById('nombre').value;
-                    const fecha = document.getElementById('fecha-evento').value;
-                    const hora = document.getElementById('hora-evento').value;
-                    const servicio = document.getElementById('tipo-servicio').value;
-                    const mensaje = document.getElementById('mensaje').value;
+              <script>
+function enviarWhatsApp() {
+    const nombre = document.getElementById('nombre').value;
+    const fecha = document.getElementById('fecha-evento').value;
+    const horaRaw = document.getElementById('hora-evento').value;
+    const servicio = document.getElementById('tipo-servicio').value;
+    const mensaje = document.getElementById('mensaje').value;
 
-                    if(!nombre || !fecha || !hora) {
-                        alert("Por favor llena los campos principales.");
-                        return;
-                    }
+    if(!nombre || !fecha || !horaRaw) {
+        alert("Por favor, llena los campos básicos para tu cotización.");
+        return;
+    }
 
-                    const telefonoMariachi = "5215527224727"; 
+    // --- TRUCO DE INGENIERO: Convertir hora 24h a AM/PM ---
+    let [horas, minutos] = horaRaw.split(':');
+    const ampm = horas >= 12 ? 'PM' : 'AM';
+    horas = horas % 12 || 12; // Convierte "00" a "12" y "13" a "1"
+    const horaFormateada = `${horas}:${minutos} ${ampm}`;
 
-                    const texto = `¡Hola Mariachi Ortiz! 🎻%0A` +
-                                  `Me gustaría una cotización:%0A` +
-                                  `*Nombre:* ${nombre}%0A` +
-                                  `*Fecha:* ${fecha}%0A` +
-                                  `*Hora:* ${hora}%0A` +
-                                  `*Servicio:* ${servicio}%0A` +
-                                  `*Detalles:* ${mensaje}`;
+    const telefonoMariachi = "5215527224727"; 
 
-                    const url = `https://wa.me/${telefonoMariachi}?text=${texto}`;
-                    window.open(url, '_blank');
-                }
-                </script>
-            </section>
+    // Usamos encodeURIComponent para que los emojis y espacios viajen perfectos
+    const textoBase = `¡Hola Mariachi Ortiz! *Cotización nueva*%0A%0A` +
+                      `*Nombre:* ${nombre}%0A` +
+                      `*Fecha:* ${fecha}%0A` +
+                      `*Hora:* ${horaFormateada}%0A` +
+                      `*Servicio:* ${servicio}%0A` +
+                      `*Detalles:* ${mensaje}`;
+
+    const url = `https://wa.me/${telefonoMariachi}?text=${textoBase}`;
+    window.open(url, '_blank');
+}
+</script>
 
             <section id="info-adicional" class="col span-1-of-2">
                 <h3>O contáctanos de Inmediato</h3>
