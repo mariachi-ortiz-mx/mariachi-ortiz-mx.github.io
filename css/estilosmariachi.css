@@ -34,7 +34,7 @@ body {
 }
 
 section {
-    padding: 70px 0;  /* separacion de espacios de la pagina  */
+   padding: 40px 0; /* Reducimos el espacio de las secciones para evitar mucho scroll */
 }
 
 /* Encabezados */
@@ -50,7 +50,8 @@ h1 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
-    font-size: 50px;
+    font-size: 140%;
+    margin-bottom: 10px;
     word-spacing: 4px;
     letter-spacing: 1px;
     text-align: center;
@@ -76,7 +77,7 @@ header {
 }
 
 .Logo { 
-    height: 150px;
+   height: 80px; /* Reducimos el logo para ganar espacio vertical */
     width: auto;
     float: left;
     margin-left: 20px; /* controla mas el margen de la izquierda */
@@ -110,7 +111,7 @@ header {
 
 .home-container {
     display: block;
-    margin: 100px auto;
+    margin-top: 50px; /* Reducimos el margen superior para que el botón suba */
     text-align: center;
 }
 
