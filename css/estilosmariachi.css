@@ -283,8 +283,8 @@ textarea{
 /* image fopter */
 
 .section-img-footer{
-    background-image: -webkit-repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(/Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(/Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
+    background-image: -webkit-repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
