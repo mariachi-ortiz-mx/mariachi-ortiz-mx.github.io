@@ -69,7 +69,7 @@ h2 {
 /* home-container */
 
 header {
-    background-image: linear-gradient(rgb(0, 0, 0, 0.705), rgb(0, 0, 0, 0.705)), url(/Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png);
+    background-image: linear-gradient(rgb(0, 0, 0, 0.705), rgb(0, 0, 0, 0.705)), url(../Imagenes/Guitarra.png);
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -283,8 +283,8 @@ textarea{
 /* image fopter */
 
 .section-img-footer{
-    background-image: -webkit-repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(../Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(../Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
+    background-image: -webkit-repeating-linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(../Imagenes/Guitarra.png) ;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(../Imagenes/Guitarra.png) ;
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -297,7 +297,7 @@ footer {
         /* Overlay negro transparente, en lugar del color sólido */
         linear-gradient( rgba(31, 29, 29, 0.85), rgba(31, 29, 29, 0.85)), 
         /* Tu imagen de fondo de guitarras */
-        url(../Imagenes/Gemini_Generated_Image_83jgqk83jgqk83jg.png) ;
+        url(../Imagenes/Guitarra.png) ;
     background-size: cover;
     background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
 
